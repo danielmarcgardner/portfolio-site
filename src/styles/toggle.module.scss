@@ -1,0 +1,63 @@
+@import 'sass-includes';
+
+.toggle {
+  position: relative;
+  cursor: pointer;
+  min-height: 1.8rem;
+  display: inline-flex;
+  &__button {
+    width: 2.5rem;
+    height: 1.4rem;
+    border-radius: 2.5rem;
+    background-color: $gray;
+    left: 0;
+
+    &:after {
+      content: '';
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: $white;
+      position: absolute;
+      left: 0.1rem;
+      top: 0.1rem;
+      bottom: 0.1rem;
+      right: auto;
+      display: block;
+      border-radius: 50%;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      transition: all 1s ease;
+    }
+  }
+
+  &.is-active {
+    .toggle__button {
+      background-color: $green;
+
+      &:after {
+        left: 1.1rem;
+      }
+    }
+
+    .toggle__label {
+      opacity: 1;
+    }
+  }
+
+  &.is-darkmode {
+    .toggle__button {
+      &:after {
+        background-image: url('../images/sun.png')
+      }
+    }
+    &.is-active {
+      .toggle__button {
+        &:after {
+          background-image: url('../images/moon.png')
+        }
+      }
+    }
+  }
+}

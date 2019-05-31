@@ -1,0 +1,25 @@
+@import 'sass-includes';
+@import url('https://fonts.googleapis.com/css?family=Concert+One');
+
+.header {
+  background: $darkblue;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  &__item {
+    margin: 1rem;
+    &--name {
+      font-weight: 700;
+      @include size(h3);
+      font-family: 'Concert One', cursive;
+    }
+    &--link {
+      cursor: pointer;
+      @include size(body);
+      margin-right: 2rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

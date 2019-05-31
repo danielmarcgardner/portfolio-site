@@ -8,11 +8,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
+import useDarkMode from '../hooks/useDarkMode'
 import Header from "./header"
-import "./layout.css"
+import styles from '../styles/layout.module.scss'
 
-const Layout = ({ children }) => (
+
+const Layout = ({ children }) => {
+const { theme, toggleDark } = useDarkMode()
+
+
+return (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -25,27 +30,21 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header siteTitle={data.site.siteMetadata.title} toggleProps={ { theme, toggleDark } } />
         <div
+          className={styles.layout}
           style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
+            background: theme === 'dark' ? '#2f4562' : '#fcfcfc',
+            color: theme ==='dark' ? '#fcfcfc' :'#2f4562'
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
         </div>
       </>
     )}
   />
 )
-
+}
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }

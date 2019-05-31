@@ -1,0 +1,57 @@
+
+
+@mixin font($family) {
+  @if $family == 'bold' {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+  } @else if $family == 'semibold' {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+  } @else if $family == 'medium' {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+  } @else if $family == 'regular' {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+  }  @else if $family == 'light' {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
+  }
+}
+
+@mixin size($type) {
+  @if $type == 'h1' {
+    font-size: 4.6rem;
+    line-height: 1.13043478;
+  }
+
+  @if $type == 'h2' {
+    font-size: 3.2rem;
+    line-height: 1.125;
+  }
+
+  @if $type == 'h3' {
+    font-size: 2.4rem;
+    line-height: 1.16666667;
+  }
+
+  @if $type == 'h4' {
+    font-size: 1.8rem;
+    line-height: 1.44444444;
+  }
+
+  @if $type == 'body' {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  @if $type == 'small' {
+    font-size: 1.4rem;
+    line-height: 1.42857143;
+  }
+
+  @if $type == 'vsmall' {
+    font-size: 1.2rem;
+    line-height: 1.66666667;
+  }
+}

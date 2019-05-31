@@ -1,36 +1,51 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Toggle from '../components/toggle';
+import styles from "../styles/header.module.scss";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
+const Header = ({ toggleProps }) => {
+  const routes = [
+    {
+      link: '/',
+      title: 'About',
+    },
+    {
+      link: '/skills',
+      title: 'Skills',
+    },
+    {
+      link: '/work',
+      title: 'Work',
+    }
+  ]
+  return (
+  <header className={styles.header} style={ {
+    color: toggleProps.theme === 'dark' ?  '#fcfcfc' : '#081b33',
+    background: toggleProps.theme === 'dark' ?  '#081b33' : '#f2f2f2'
+  } }>
+    <div className={styles['header__item']}>
+      <h3 className={styles['header__itemName']}>Daniel Gardner</h3>
+    </div>
+    <div className={styles['header__item']}>
+      {routes.map(route =>
         <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+          to={route.link}
+          key={`${route.title}--link`}
+          className={styles['header__itemLink']}
+          style={ { color: toggleProps.theme === 'dark' ?  '#fcfcfc' : '#081b33' } }
+          >{route.title}
         </Link>
-      </h1>
+      )}
+      <Toggle
+        active={toggleProps.theme === 'dark'}
+        onCheck={toggleProps.toggleDark}
+        isDarkMode={true}
+      />
     </div>
   </header>
 )
-
+}
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
