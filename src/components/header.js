@@ -25,7 +25,7 @@ const Header = ({ toggleProps }) => {
     background: toggleProps.theme === 'dark' ?  '#081b33' : '#f2f2f2'
   } }>
     <div className={styles['header__item']}>
-      <h3 className={styles['header__itemName']}>Daniel Gardner</h3>
+      <h2 className={styles['header__itemName']}>Daniel Gardner</h2>
     </div>
     <div className={styles['header__item']}>
       {routes.map(route =>

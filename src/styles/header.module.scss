@@ -8,9 +8,11 @@
   justify-content: space-around;
   &__item {
     margin: 1rem;
+    display: flex;
+    align-items: flex-end;
     &--name {
       font-weight: 700;
-      @include size(h3);
+      @include size(h2);
       font-family: 'Concert One', cursive;
     }
     &--link {

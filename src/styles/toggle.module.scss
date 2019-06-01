@@ -3,19 +3,19 @@
 .toggle {
   position: relative;
   cursor: pointer;
-  min-height: 1.8rem;
+  min-height: 2.2rem;
   display: inline-flex;
   &__button {
-    width: 2.5rem;
-    height: 1.4rem;
+    width: 3.5rem;
+    height: 2rem;
     border-radius: 2.5rem;
     background-color: $gray;
     left: 0;
 
     &:after {
       content: '';
-      width: 1.2rem;
-      height: 1.2rem;
+      width: 1.8rem;
+      height: 1.8rem;
       background-color: $white;
       position: absolute;
       left: 0.1rem;
@@ -37,7 +37,7 @@
       background-color: $green;
 
       &:after {
-        left: 1.1rem;
+        left: 1.6rem;
       }
     }
 
@@ -49,12 +49,14 @@
   &.is-darkmode {
     .toggle__button {
       &:after {
+        background-position: center;
         background-image: url('../images/sun.png')
       }
     }
     &.is-active {
       .toggle__button {
         &:after {
+          background-position: center;
           background-image: url('../images/moon.png')
         }
       }
