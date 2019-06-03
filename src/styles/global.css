@@ -10,28 +10,33 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
-  line-height: 1.25;
+  font-size: 1.6rem !important;
+  line-height: 1.25 !important;
 }
 
 h1 {
-  font-size: 4.6rem;
-  line-height: 1.13043478;
+  font-size: 4.6rem !important;
+  line-height: 1.13043478 !important;
 }
 
 h2 {
-  font-size: 3.2rem;
-  line-height: 1.125;
+  font-size: 3.2rem !important;
+  line-height: 1.125 !important;
 }
 
 h3 {
-  font-size: 2.4rem;
-  line-height: 1.16666667;
+  font-size: 2.4rem !important;
+  line-height: 1.16666667 !important;
 }
 
 h4 {
-  font-size: 1.8rem;
-  line-height: 1.44444444;
+  font-size: 2rem !important;
+  line-height: 1.44444444 !important;
+}
+
+h5 {
+  font-size: 1.8rem !important;
+  line-height: 1.25 !important;
 }
 
 strong {
@@ -42,7 +47,7 @@ p {
    margin-bottom: 1rem;
 }
 a {
-  text-decoration: none;
+  color: inherit;
 }
 
 sup {

@@ -1,0 +1,22 @@
+@import 'sass-includes';
+
+.hero {
+  height: 40rem;
+  width: calc(100vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('../images/code.png');
+  background-repeat: no-repeat;
+  background-color: rgba(238, 238, 238, 0.7) !important;
+  background-blend-mode: color;
+  &__img {
+    border-radius: 50%;
+    border: 0.5rem solid transparent;
+  }
+  &__text {
+    margin-top: 1.5rem;
+    font-weight: 700;
+  }
+}
