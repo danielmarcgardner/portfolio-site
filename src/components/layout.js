@@ -12,8 +12,8 @@ const Layout = ({ children }) => {
 const { theme, toggleDark } = useDarkMode()
 
   return (
-    <DarkModeContext.Provider value={{theme}}>
-      <Header toggleProps={ { theme, toggleDark } } />
+    <DarkModeContext.Provider value={{theme, toggleDark}}>
+      <Header />
       <div
         className={styles.layout}
         style={{
@@ -24,8 +24,8 @@ const { theme, toggleDark } = useDarkMode()
         <main className={styles['layout__main']}>
           {children}
         </main>
-        <Footer theme={theme}/>
       </div>
+      <Footer theme={theme}/>
     </DarkModeContext.Provider>
   )
 }

@@ -7,17 +7,18 @@ import SEO from "../components/seo";
 import Hero from '../components/hero';
 import Section from '../components/section';
 import About from '../components/about';
+import Contact from '../components/contact';
 
 const IndexPage = (props) => {
   const { data } = props;
-  const sections = [<About />]
+  const sections = [<About />, <Contact />]
   return (
     <Layout>
       <SEO title="Home" />
       <Hero profile={data.profilePic.childImageSharp.fixed} />
       {sections.map((section, i) => (
         <Section key={`section-${i}`}>
-          <About />
+          {section}
         </Section>
       ))}
     </Layout>

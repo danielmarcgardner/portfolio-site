@@ -1,0 +1,28 @@
+@import 'sass-includes';
+
+.input {
+  margin: 1rem 0rem;
+  &__label {
+    font-weight: 600;
+  }
+  &__input {
+    @include size(body);
+    padding: 0.5em 0.75em;
+    background-color: $lightgray;
+    border: 0.3rem solid transparent;
+    width: 100%;
+    border-radius: 0.75rem;
+    position: relative;
+
+    &::-webkit-input-placeholder { color: $gray; }
+    &::-moz-placeholder { color: $gray; }
+    &:-ms-input-placeholder { color: $gray; }
+    &:-moz-placeholder { color: $gray; }
+  }
+
+  textarea {
+    min-height: 18rem;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}

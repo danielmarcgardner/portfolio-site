@@ -66,3 +66,8 @@ blockquote {
   padding-left: 3rem;
   border-left: 0.1rem solid $black;
 }
+
+body.user-is-tabbing *:focus {
+  outline: 2px solid #7AACFE;
+  outline: 5px auto -webkit-focus-ring-color;
+}

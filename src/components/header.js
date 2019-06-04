@@ -1,10 +1,12 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useContext } from "react"
 import Toggle from '../components/toggle';
+import DarkModeContext from '../context/darkmodecontext'
 import styles from "../styles/header.module.scss";
 
-const Header = ({ toggleProps }) => {
+const Header = () => {
+  const { theme, toggleDark } = useContext(DarkModeContext);
   const routes = [
     {
       link: '/',
@@ -21,8 +23,8 @@ const Header = ({ toggleProps }) => {
   ]
   return (
   <header className={styles.header} style={ {
-    color: toggleProps.theme === 'dark' ?  '#fcfcfc' : '#081b33',
-    background: toggleProps.theme === 'dark' ?  '#081b33' : '#f2f2f2'
+    color: theme === 'dark' ?  '#fcfcfc' : '#081b33',
+    background: theme === 'dark' ?  '#081b33' : '#f2f2f2'
   } }>
     <div className={styles['header__item']}>
       <h2 className={styles['header__itemName']}>Daniel Gardner</h2>
@@ -33,13 +35,13 @@ const Header = ({ toggleProps }) => {
           to={route.link}
           key={`${route.title}--link`}
           className={styles['header__itemLink']}
-          style={ { color: toggleProps.theme === 'dark' ?  '#fcfcfc' : '#081b33' } }
+          style={ { color: theme === 'dark' ?  '#fcfcfc' : '#081b33' } }
           >{route.title}
         </Link>
       )}
       <Toggle
-        active={toggleProps.theme === 'dark'}
-        onCheck={toggleProps.toggleDark}
+        active={theme === 'dark'}
+        onCheck={toggleDark}
         isDarkMode={true}
       />
     </div>

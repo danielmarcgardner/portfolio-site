@@ -1,0 +1,17 @@
+@import 'sass-includes';
+
+.button {
+  @include size(h4);
+  @include font(semibold);
+  text-align: center;
+  min-width: 18rem;
+  background-color: $red;
+  color: $white;
+  padding: 0.834em 1.3em;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+  border-radius: 0.5rem;
+  &:hover { background-color: $darkred; }
+}

@@ -6,7 +6,7 @@ export const About = () => {
       <h3 className="section__header">About</h3>
       <p>
         I love building things and it has always been a passion of mine.
-        I am a Full Stack Web Developer working currently as a Software Engineer at <a href="https://asktrim.com" target="_blank" rel="noopener noreferrer">Trim</a>
+        I am a Full Stack Web Developer working currently as a Software Engineer at <a href="https://www.asktrim.com/" target="_blank" rel="noopener noreferrer">Trim</a>
       </p>
       <br />
       <p>

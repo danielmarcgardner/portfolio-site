@@ -7,3 +7,6 @@
 // You can delete this file if you're not using it
 
 import "./src/styles/global.css"
+import { handleFirstTab } from './src/utils/accessability';
+
+window.addEventListener('keydown', handleFirstTab);
