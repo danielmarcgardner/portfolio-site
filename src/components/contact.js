@@ -4,9 +4,8 @@ import Button from './button';
 import encode from '../utils/encode';
 import styles from '../styles/contact.module.scss'
 
-export const Contact = () => {
+export const Contact = ({setShowContact}) => {
   const [formState, setFormState] = useState({});
-  console.log(formState);
 
   const handleChange = (e) => {
     e.persist()
@@ -24,7 +23,9 @@ export const Contact = () => {
         ...formState
       })
     })
-      .then(() => alert('Successfully submitted!'))
+      .then(() => {
+        setShowContact(false)
+      })
       .catch(error => alert(error));
   };
 

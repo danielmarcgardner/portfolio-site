@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
@@ -8,10 +8,13 @@ import Hero from '../components/hero';
 import Section from '../components/section';
 import About from '../components/about';
 import Contact from '../components/contact';
+import Confirmation from '../components/confirmation';
 
 const IndexPage = (props) => {
   const { data } = props;
-  const sections = [<About />, <Contact />]
+  const [showContact, setShowContact] = useState(true)
+  const SecondComponent = showContact ? <Contact setShowContact={setShowContact} /> : <Confirmation />
+  const sections = [<About />, SecondComponent]
   return (
     <Layout>
       <SEO title="Home" />
