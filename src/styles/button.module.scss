@@ -7,11 +7,17 @@
   min-width: 18rem;
   background-color: $red;
   color: $white;
-  padding: 0.834em 1.3em;
+  padding: 0.8rem 1.1rem;
   line-height: 1;
   cursor: pointer;
   display: inline-block;
   transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
   border-radius: 0.5rem;
+  border: 0.2rem solid transparent;
   &:hover { background-color: $darkred; }
+  &--resume {
+    text-decoration: none;
+    background-color: transparent;
+    &:hover { background-color: transparent !important; }
+  }
 }

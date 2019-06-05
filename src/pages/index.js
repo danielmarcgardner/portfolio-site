@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import Image from "../components/image";
@@ -9,16 +8,16 @@ import Section from '../components/section';
 import About from '../components/about';
 import Contact from '../components/contact';
 import Confirmation from '../components/confirmation';
+import ResumeLink from '../components/resumelink';
 
-const IndexPage = (props) => {
-  const { data } = props;
+const IndexPage = () => {
   const [showContact, setShowContact] = useState(true)
   const SecondComponent = showContact ? <Contact setShowContact={setShowContact} /> : <Confirmation />
-  const sections = [<About />, SecondComponent]
+  const sections = [<About />, SecondComponent, <ResumeLink />]
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero profile={data.profilePic.childImageSharp.fixed} />
+      <Hero />
       {sections.map((section, i) => (
         <Section key={`section-${i}`}>
           {section}
@@ -28,15 +27,3 @@ const IndexPage = (props) => {
   )
 }
 export default IndexPage
-
-export const query = graphql`
-  query query {
-    profilePic: file(relativePath: { eq: "profile.jpg" }) {
-      childImageSharp {
-        fixed(width: 200, height: 200) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
