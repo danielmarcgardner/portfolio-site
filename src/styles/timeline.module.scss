@@ -1,0 +1,21 @@
+@import 'sass-includes';
+
+.timelinerow {
+  padding: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
+  &--left {
+    width: 50%;
+    max-width: 30rem;
+  }
+
+  &--right {
+    max-width: 50rem;
+    &--list {
+      list-style: circle;
+      &--item {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

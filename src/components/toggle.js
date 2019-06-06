@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import styles from '../styles/toggle.module.scss';
 
 const Toggle = ({ active, onCheck, activeLogo, inactiveLogo, isDarkMode }) => {

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Hero from '../components/hero';
 import Section from '../components/section';
 import About from '../components/about';
 import Contact from '../components/contact';
@@ -20,7 +19,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero />
       {sections.map((section, i) => (
         <Section key={`section-${i}`}>{section}</Section>
       ))}

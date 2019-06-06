@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Section from '../components/section';
-import Hero from '../components/hero';
 import SkillsContainer from '../components/skillscontainer';
 
 const SkillsPage = () => {
@@ -112,7 +111,6 @@ const SkillsPage = () => {
   return (
     <Layout>
       <SEO title="Skills" />
-      <Hero />
       {sections.map((section, i) => (
         <Section key={`skills-page-section-${i}`}>
           {section}
