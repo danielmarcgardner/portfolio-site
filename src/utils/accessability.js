@@ -1,4 +1,4 @@
-export const handleFirstTab = (e) => {
+export const handleFirstTab = e => {
   if (e.keyCode === 9) {
     document.body.classList.add('user-is-tabbing');
 
@@ -12,4 +12,4 @@ export const handleFirstTab = (e) => {
     window.removeEventListener('keydown', handleFirstTab);
     window.addEventListener('mousedown', handleMouseDownOnce);
   }
-}
+};

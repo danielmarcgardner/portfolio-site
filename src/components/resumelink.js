@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { StaticQuery, graphql } from "gatsby"
-import DarkModeContext from '../context/darkmodecontext'
-import style from '../styles/button.module.scss'
+import { StaticQuery, graphql } from 'gatsby';
+import DarkModeContext from '../context/darkmodecontext';
+import style from '../styles/button.module.scss';
 
-export const ResumeLink = () => { 
+export const ResumeLink = () => {
   const { theme } = useContext(DarkModeContext);
   return (
     <StaticQuery
@@ -26,16 +26,18 @@ export const ResumeLink = () => {
             href={resumeLink}
             target="_blank"
             className={`${style.button} ${style.buttonResume}`}
-            style={ {
+            style={{
               borderColor: theme === 'dark' ? '#fcfcfc' : '#2f4562',
-              color: theme === 'dark' ? '#fcfcfc' : '#2f4562'
-              }
-            }
-            > Download Resume </a>
-        )
+              color: theme === 'dark' ? '#fcfcfc' : '#2f4562',
+            }}
+          >
+            {' '}
+            Download Resume{' '}
+          </a>
+        );
       }}
     />
-  )
-}
+  );
+};
 
 export default ResumeLink;

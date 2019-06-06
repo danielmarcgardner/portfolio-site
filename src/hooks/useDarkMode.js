@@ -5,13 +5,13 @@ const useDarkMode = () => {
 
   const toggleDark = () => {
     if (theme === 'dark') {
-      setTheme('light')
-      if (localStorage) localStorage.setItem('userTheme', 'light')
+      setTheme('light');
+      if (localStorage) localStorage.setItem('userTheme', 'light');
     } else {
-      setTheme('dark')
-      if (localStorage) localStorage.setItem('userTheme', 'dark')
+      setTheme('dark');
+      if (localStorage) localStorage.setItem('userTheme', 'dark');
     }
-  }
+  };
 
   useEffect(() => {
     const userHasSetTheme = localStorage.getItem('userTheme');
@@ -19,6 +19,6 @@ const useDarkMode = () => {
   }, []);
 
   return { theme, toggleDark };
-}
+};
 
 export default useDarkMode;

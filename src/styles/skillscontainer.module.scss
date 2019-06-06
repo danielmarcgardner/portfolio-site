@@ -1,0 +1,9 @@
+@import 'sass-includes';
+
+.skillscontainer {
+  
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

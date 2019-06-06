@@ -1,4 +1,4 @@
 import { createContext } from 'react';
-const DarkModeContext = createContext({})
+const DarkModeContext = createContext({});
 
 export default DarkModeContext;

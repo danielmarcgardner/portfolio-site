@@ -1,0 +1,19 @@
+@import 'sass-includes';
+
+.skillcard {
+  padding: 1rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin: 0.5rem;
+  &__img {
+    max-width: 15rem;
+    max-height: 10rem;
+  }
+  &__header {
+    text-align: center;
+    // position: absolute;
+    // margin-top: -3rem;
+    // margin-left: -10rem;
+    // padding: 0.4rem;
+  }
+}

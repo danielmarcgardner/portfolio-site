@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Daniel Gardner`,
-    description: `My personal portfolio site.`,
-    author: `@danielmarcgardner`,
+    description: `Daniel Gardner portfolio site.`,
+    author: `@danielmgardner1`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icons/gatsby.png`, // This path is relative to the root of the site.
       },
     },
     {
