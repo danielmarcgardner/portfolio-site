@@ -1,6 +1,5 @@
 import React, { createContext } from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
 import useDarkMode from '../hooks/useDarkMode';
 import Header from './header';
 import Hero from './hero';
