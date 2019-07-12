@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/layout';
+// import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Section from '../components/section';
 import SkillsContainer from '../components/skillscontainer';
@@ -48,6 +48,10 @@ const SkillsPage = () => {
     {
       img: require('../images/icons/node.png'),
       name: 'Node'
+    },
+    {
+      img: require('../images/icons/ruby.png'),
+      name: 'Ruby'
     },
     {
       img: require('../images/icons/serverless.png'),
@@ -99,24 +103,28 @@ const SkillsPage = () => {
     {
       img: require('../images/icons/jira.png'),
       name: 'Jira'
+    },
+    {
+      img: require('../images/icons/asana.png'),
+      name: 'Asana'
     }
   ]
 
   const sections = [
-    <SkillsContainer skills={frontendSkills} sectionTitle="Select Frontend Languages and Packages:"/>,
-    <SkillsContainer skills={backendSkills} sectionTitle="Select Backend Languages and Packages:"/>,
-    <SkillsContainer skills={toolsSkills} sectionTitle="Select Tools/Other:"/>,
+    <SkillsContainer skills={frontendSkills} sectionTitle="Frontend Languages and Packages:"/>,
+    <SkillsContainer skills={backendSkills} sectionTitle="Backend Languages and Packages:"/>,
+    <SkillsContainer skills={toolsSkills} sectionTitle="Tools/Other:"/>,
   ]
 
   return (
-    <Layout>
+    <React.Fragment>
       <SEO title="Skills" />
       {sections.map((section, i) => (
         <Section key={`skills-page-section-${i}`}>
           {section}
         </Section>
       ))}
-    </Layout>
+    </React.Fragment>
   )
 }
 

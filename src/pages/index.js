@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Layout from '../components/layout';
+// import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Section from '../components/section';
 import About from '../components/about';
@@ -17,12 +17,12 @@ const IndexPage = () => {
   );
   const sections = [<About />, SecondComponent, <ResumeLink />];
   return (
-    <Layout>
+    <React.Fragment>
       <SEO title="Home" />
       {sections.map((section, i) => (
         <Section key={`section-${i}`}>{section}</Section>
       ))}
-    </Layout>
+    </React.Fragment>
   );
 };
 export default IndexPage;

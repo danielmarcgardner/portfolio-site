@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Daniel Gardner`,
-    description: `Daniel Gardner portfolio site.`,
+    description: `Daniel Gardner Software Engineer.`,
     author: `@danielmgardner1`,
   },
   plugins: [
@@ -26,6 +26,12 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/icons/gatsby.png`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+          component: require.resolve(`./src/components/layout`)
+      }
     },
     {
       resolve: `gatsby-plugin-sass`,

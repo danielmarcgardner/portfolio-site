@@ -1,11 +1,19 @@
 import React from 'react'
-import Layout from '../components/layout';
+// import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Section from '../components/section';
 import TimeLine from '../components/timeline';
 
 export const WorkPage = () => {
   const work = [
+    {
+      title: 'Software Engineer',
+      company: 'Trim',
+      time: '6/2019 - Present',
+      bulletPoints: [
+        'Hired as a Software Engineer working on our web application. I work on both our React Client and Ruby/Rails backend. Trim is designed to help consumers take control of and autimate their financial health.'
+      ]
+    },
     {
       title: 'Frontend Engineer',
       company: 'Revere',
@@ -52,12 +60,12 @@ export const WorkPage = () => {
     }
   ]
   return (
-    <Layout>
+    <React.Fragment>
       <SEO title="Work History"/>
       <Section>
         <TimeLine timelineItems={work} />
       </Section>
-    </Layout>
+    </React.Fragment>
   )
 }
 

@@ -7,10 +7,17 @@
   &--left {
     width: 50%;
     max-width: 30rem;
+
+    @include breakpoint($mobile-md) {
+      min-width: 15rem;
+    }
   }
 
   &--right {
     max-width: 50rem;
+    @include breakpoint($mobile-md) {
+      margin-left: 1.5rem;
+    }
     &--list {
       list-style: circle;
       &--item {

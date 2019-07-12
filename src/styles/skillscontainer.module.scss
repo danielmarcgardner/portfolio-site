@@ -1,9 +1,13 @@
 @import 'sass-includes';
 
 .skillscontainer {
-  
+
   &__content {
     display: flex;
     flex-wrap: wrap;
+
+    @include breakpoint ($mobile-lg) {
+        justify-content: space-around;
+    }
   }
 }
