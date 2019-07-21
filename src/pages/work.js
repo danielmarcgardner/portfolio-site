@@ -11,7 +11,7 @@ export const WorkPage = () => {
       company: 'Trim',
       time: '6/2019 - Present',
       bulletPoints: [
-        'Hired as a Software Engineer working on our web application. I work on both our React Client and Ruby/Rails backend. Trim is designed to help consumers take control of and autimate their financial health.'
+        'Hired as a Software Engineer working on our web application. I work on both our React Client and Ruby/Rails backend. Trim is designed to help consumers take control of and automate their financial health.'
       ]
     },
     {
