@@ -30,7 +30,7 @@ export const Hero = () => {
             Daniel Gardner
           </h2>
           <h3 className={styles['hero__text']} style={{ color: '#2f4562' }}>
-            Full Stack Engineer
+            Associate Director of Engineering
           </h3>
         </div>
       )}

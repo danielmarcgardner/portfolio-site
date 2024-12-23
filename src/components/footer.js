@@ -32,7 +32,7 @@ export const Footer = ({ theme }) => {
         background: theme === 'dark' ? '#081b33' : '#f2f2f2',
       }}
     >
-      <div>&copy; Daniel Gardner 2019</div>
+      <div>&copy; Daniel Gardner 2025</div>
       <div>
         {social.map(item => (
           <a
