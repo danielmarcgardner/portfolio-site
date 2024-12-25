@@ -1,4 +1,4 @@
-@import 'sass-includes';
+@use './variables/colors' as colors;
 
 .toggle {
   position: relative;
@@ -9,14 +9,14 @@
     width: 3.5rem;
     height: 2rem;
     border-radius: 2.5rem;
-    background-color: $gray;
+    background-color: colors.$gray;
     left: 0;
 
     &:after {
       content: '';
       width: 1.8rem;
       height: 1.8rem;
-      background-color: $white;
+      background-color: colors.$white;
       position: absolute;
       left: 0.1rem;
       top: 0.1rem;
@@ -34,7 +34,7 @@
 
   &.is-active {
     .toggle__button {
-      background-color: $green;
+      background-color: colors.$green;
 
       &:after {
         left: 1.6rem;

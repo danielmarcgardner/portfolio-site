@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import Toggle from '../components/toggle';
 import DarkModeContext from '../context/darkmodecontext';
-import styles from '../styles/header.module.scss';
+import * as styles from '../styles/header.module.scss';
 
 const Header = () => {
   const { theme, toggleDark } = useContext(DarkModeContext);

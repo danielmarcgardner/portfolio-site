@@ -1,11 +1,11 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import useDarkMode from '../hooks/useDarkMode';
 import Header from './header';
 import Hero from './hero';
 import DarkModeContext from '../context/darkmodecontext';
 import Footer from './footer';
-import styles from '../styles/layout.module.scss';
+import * as styles from '../styles/layout.module.scss';
 
 const Layout = ({ children }) => {
   const { theme, toggleDark } = useDarkMode();
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
           color: theme === 'dark' ? '#fcfcfc' : '#2f4562',
         }}
       >
-        <main className={styles['layout__main']}>
+        <main className={styles['layout']}>
           <Hero />
           {children}
         </main>

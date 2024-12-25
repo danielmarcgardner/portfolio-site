@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/timeline.module.scss';
+import * as styles from '../styles/timeline.module.scss';
 
 export const TimeLineRow = ({ title, time, company, bulletPoints}) => {
 

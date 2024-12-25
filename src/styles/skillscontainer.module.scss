@@ -1,4 +1,5 @@
-@import 'sass-includes';
+@use './variables/breakpoints' as breakpoint;
+@use './mixins/breakpoints' as breakpoint_func;
 
 .skillscontainer {
 
@@ -6,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include breakpoint ($mobile-lg) {
+    @include breakpoint_func.breakpoint(breakpoint.$mobile-lg) {
         justify-content: space-around;
     }
   }

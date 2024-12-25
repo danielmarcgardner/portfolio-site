@@ -1,4 +1,5 @@
-@import 'sass-includes';
+@use './mixins/typography' as typography;
+@use './variables/colors' as colors;
 
 .input {
   margin: 1rem 0rem;
@@ -6,18 +7,18 @@
     font-weight: 600;
   }
   &__input {
-    @include size(body);
+    @include typography.size(body);
     padding: 0.5em 0.75em;
-    background-color: $lightgray;
+    background-color: colors.$lightgray;
     border: 0.3rem solid transparent;
     width: 100%;
     border-radius: 0.75rem;
     position: relative;
 
-    &::-webkit-input-placeholder { color: $gray; }
-    &::-moz-placeholder { color: $gray; }
-    &:-ms-input-placeholder { color: $gray; }
-    &:-moz-placeholder { color: $gray; }
+    &::-webkit-input-placeholder { color: colors.$gray; }
+    &::-moz-placeholder { color: colors.$gray; }
+    &:-ms-input-placeholder { color: colors.$gray; }
+    &:-moz-placeholder { color: colors.$gray; }
   }
 
   textarea {

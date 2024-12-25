@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/input.module.scss';
+import * as styles from '../styles/input.module.scss';
 
 export const Input = ({ labelText, type, name, onChange, hidden }) => {
   const props = {

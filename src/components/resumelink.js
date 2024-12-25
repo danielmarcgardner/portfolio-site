@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import DarkModeContext from '../context/darkmodecontext';
-import style from '../styles/button.module.scss';
+import * as style from '../styles/button.module.scss';
 
 export const ResumeLink = () => {
   const { theme } = useContext(DarkModeContext);

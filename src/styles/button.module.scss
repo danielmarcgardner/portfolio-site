@@ -1,12 +1,14 @@
-@import 'sass-includes';
+@use './mixins/typography' as typography;
+@use './variables/colors' as colors;
+
 
 .button {
-  @include size(h4);
-  @include font(semibold);
+  @include typography.size(h4);
+  @include typography.font(semibold);
   text-align: center;
   min-width: 18rem;
-  background-color: $red;
-  color: $white;
+  background-color: colors.$red;
+  color: colors.$white;
   padding: 0.8rem 1.1rem;
   line-height: 1;
   cursor: pointer;
@@ -14,7 +16,7 @@
   transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
   border-radius: 0.5rem;
   border: 0.2rem solid transparent;
-  &:hover { background-color: $darkred; }
+  &:hover { background-color: colors.$darkred; }
   &--resume {
     text-decoration: none;
     background-color: transparent;

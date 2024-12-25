@@ -1,9 +1,8 @@
-@import "mixins/mixins.index";
-@import "variables/variables.index";
-@import "reset";
+@use "./reset" as reset2;
 
 .layout {
   display: flex;
   position: relative;
   min-height: calc(100vh - 10rem);
+  flex-direction: column;
 }

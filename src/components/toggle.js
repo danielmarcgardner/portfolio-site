@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/toggle.module.scss';
+import * as styles from '../styles/toggle.module.scss';
 
 const Toggle = ({ active, onCheck, activeLogo, inactiveLogo, isDarkMode }) => {
   const hasLogos = activeLogo && inactiveLogo;

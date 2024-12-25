@@ -67,3 +67,11 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# CSS Modules
+*.module.css*
+*css.map
+*breakpoints.css
+*index.css
+*typography.css
+*colors.css

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/confirmation.module.scss';
+import * as styles from '../styles/confirmation.module.scss';
 
 export const Confirmation = () => (
   <div className={styles.confirmation}>
