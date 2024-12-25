@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Input from './input';
 import Button from './button';
 import encode from '../utils/encode';
-import styles from '../styles/contact.module.scss';
+import * as styles from '../styles/contact.module.scss';
 
 export const Contact = ({ setShowContact }) => {
   const [formState, setFormState] = useState({});

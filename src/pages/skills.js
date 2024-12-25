@@ -23,6 +23,14 @@ const SkillsPage = () => {
       name: 'Gatsby'
     },
     {
+      img: require('../images/icons/styled-components.png'),
+      name: 'Styled'
+    },
+    {
+      img: require('../images/icons/ionic.png'),
+      name: 'Ionic'
+    },
+    {
       img: require('../images/icons/sass.png'),
       name: 'Sass'
     },
@@ -31,17 +39,9 @@ const SkillsPage = () => {
       name: 'CSS'
     },
     {
-      img: require('../images/icons/html.png'),
-      name: 'HTML'
-    },
-    {
       img: require('../images/icons/jest.png'),
       name: 'Jest'
     },
-    {
-      img: require('../images/icons/enzyme.png'),
-      name: 'Enzyme'
-    }
   ]
 
   const backendSkills = [
@@ -54,8 +54,8 @@ const SkillsPage = () => {
       name: 'Ruby'
     },
     {
-      img: require('../images/icons/serverless.png'),
-      name: 'Serverless'
+      img: require('../images/icons/rails.svg'),
+      name: 'Rails'
     },
     {
       img: require('../images/icons/graphql.png'),
@@ -73,6 +73,10 @@ const SkillsPage = () => {
 
   const toolsSkills = [
     {
+      img: require('../images/icons/datadog.svg'),
+      name: 'Datadog'
+    },
+    {
       img: require('../images/icons/npm.png'),
       name: 'NPM'
     },
@@ -89,16 +93,12 @@ const SkillsPage = () => {
       name: 'CircleCI'
     },
     {
-      img: require('../images/icons/rollbar.png'),
-      name: 'Rollbar'
+      img: require('../images/icons/sentry.png'),
+      name: 'Sentry',
     },
     {
       img: require('../images/icons/stripe.png'),
       name: 'Stripe'
-    },
-    {
-      img: require('../images/icons/segment.png'),
-      name: 'Segment'
     },
     {
       img: require('../images/icons/jira.png'),

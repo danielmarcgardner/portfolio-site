@@ -1,4 +1,5 @@
-@import 'sass-includes';
+@use './variables/breakpoints' as breakpoint;
+@use './mixins/breakpoints' as breakpoint_func;
 
 .timelinerow {
   padding: 1rem;
@@ -8,14 +9,14 @@
     width: 50%;
     max-width: 30rem;
 
-    @include breakpoint($mobile-md) {
+    @include breakpoint_func.breakpoint(breakpoint.$mobile-md) {
       min-width: 15rem;
     }
-  }
+  };
 
   &--right {
     max-width: 50rem;
-    @include breakpoint($mobile-md) {
+    @include breakpoint_func.breakpoint(breakpoint.$mobile-md) {
       margin-left: 1.5rem;
     }
     &--list {

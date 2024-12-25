@@ -1,8 +1,9 @@
-@import 'sass-includes';
+@use './mixins/typography' as typography;
+@use './variables/colors' as colors;
 @import url('https://fonts.googleapis.com/css?family=Concert+One');
 
 .header {
-  background: $darkblue;
+  background: colors.$darkblue;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,12 +13,12 @@
     align-items: flex-end;
     &--name {
       font-weight: 700;
-      @include size(h2);
+      @include typography.size(h2);
       font-family: 'Concert One', cursive;
     }
     &--link {
       cursor: pointer;
-      @include size(body);
+      @include typography.size(body);
       margin-right: 2rem;
       &:hover {
         text-decoration: underline;

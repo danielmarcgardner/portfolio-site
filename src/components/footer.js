@@ -1,26 +1,26 @@
 import React from 'react';
-import styles from '../styles/footer.module.scss';
+import * as styles from '../styles/footer.module.scss';
 
 export const Footer = ({ theme }) => {
   const social = [
     {
       link: 'https://github.com/danielmarcgardner',
-      icon: require('../images/github.png'),
+      icon: require('../images/github.png').default,
       key: 'github-social-link',
     },
     {
       link: 'https://www.linkedin.com/in/danielmarcgardner/',
-      icon: require('../images/linkedin.png'),
+      icon: require('../images/linkedin.png').default,
       key: 'linkedin-social-link',
     },
     {
       link: 'https://medium.com/@danielgardner',
-      icon: require('../images/medium.png'),
+      icon: require('../images/medium.png').default,
       key: 'medium-social-link',
     },
     {
       link: 'https://twitter.com/danielmgardner1',
-      icon: require('../images/twitter.png'),
+      icon: require('../images/twitter.png').default,
       key: 'twitter-social-link',
     },
   ];
@@ -32,7 +32,7 @@ export const Footer = ({ theme }) => {
         background: theme === 'dark' ? '#081b33' : '#f2f2f2',
       }}
     >
-      <div>&copy; Daniel Gardner 2019</div>
+      <div>&copy; Daniel Gardner 2025</div>
       <div>
         {social.map(item => (
           <a

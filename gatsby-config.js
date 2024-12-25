@@ -1,3 +1,5 @@
+const { sassFalse } = require("sass");
+
 module.exports = {
   siteMetadata: {
     title: `Daniel Gardner`,
@@ -15,6 +17,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    'gatsby-plugin-netlify',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -36,10 +39,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        includePaths: [
-          'src/styles',
-          'src/styles/_global.scss'
-        ]
+        sassOptions: {
+          includePaths: [
+            'src/styles',
+            'src/styles/_global.scss'
+          ]
+        }
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

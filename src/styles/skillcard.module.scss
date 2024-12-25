@@ -1,5 +1,3 @@
-@import 'sass-includes';
-
 .skillcard {
   padding: 1rem;
   border-radius: 2rem;
@@ -11,9 +9,5 @@
   }
   &__header {
     text-align: center;
-    // position: absolute;
-    // margin-top: -3rem;
-    // margin-left: -10rem;
-    // padding: 0.4rem;
   }
 }

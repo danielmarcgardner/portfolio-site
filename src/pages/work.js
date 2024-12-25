@@ -7,11 +7,42 @@ import TimeLine from '../components/timeline';
 export const WorkPage = () => {
   const work = [
     {
+      title: 'Associate Director of Engineering',
+      company: 'OneMain Financial / Trim',
+      time: '7/2022 - Present',
+      bulletPoints: [
+        'Leading the engineering team for the Wellness (Trim) Lane, overseeing and managing a team of over 10 engineers at its peak to drive innovation and deliver impactful solutions. Built a strong engineering culture that resulted in high team morale and strong productivity.',
+        'Recruited and onboarded 8 engineers, maintaining zero attrition for over three years.',
+        'Navigated the team through a corporate RIF, preserving team morale and retaining all unaffected members.',
+        'Maintained a remarkable record of zero natural attrition over three years.Successfully navigated the team through a challenging RIF(reductions in force), retaining all unaffected members and preserving team morale and productivity.',
+        'Spearheading the integration of the Trim app into OneMain\'s digital ecosystem. Collaborating with cross functional teams to build integrations across different lanes.',
+        'Introduced an open - source collaboration model, improving cross - team code sharing and development efficiency.',
+        'Led technical and cybersecurity integration with OneMain, including laptop migrations, cyber tool deployment, and vulnerability management.',
+        'Regularly helped engineers get unblocked and navigated them through corporate bureaucracy to accomplish their work.',
+      ]
+    },
+    {
+      title: 'Tech Lead / Senior Software Engineer Engineer',
+      company: 'OneMain Financial / Trim',
+      time: '3/2021 - 7/2022',
+      bulletPoints: [
+        'Managed 6 engineers, including one manager overseeing 3 engineers, fostering a collaborative and high - performing culture.',
+        'Partnered with product teams to scope, manage, and deliver projects, including SSO integration, subscription redesign, and major backend upgrades.',
+        'Acted as a hands - on technical leader, reviewing PRs, contributing code, and guiding engineers through complex challenges.',
+
+      ]
+    },
+    {
       title: 'Software Engineer',
       company: 'Trim',
-      time: '6/2019 - Present',
+      time: '6/2019 - 3/2021',
       bulletPoints: [
-        'Hired as a Software Engineer working on our web application. I work on both our React Client and Ruby/Rails backend. Trim is designed to help consumers take control of and automate their financial health.'
+        'Started primarily as a Frontend Engineer but over time learned Rails and moved into a full - stack role. ',
+        'Built Trim\'s new dashboard that highlights how much Trim has saved users.',
+        'Built the Trim Transaction Brain that acts as Trim\'s CTA Engine for helping guide users toward savings opportunities.',
+        'Led the integration and switch of payment providers from Braintree to Stripe which included designing our frontend, building out new backend logic and tables that were payment provider agnostic, and migrated all Braintree card data to Stripe data.',
+        'Built Trim\'s onboarding funnel that allowed users to sign up for all of Trim\'s premium features.',
+
       ]
     },
     {
