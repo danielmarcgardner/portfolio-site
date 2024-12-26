@@ -22,7 +22,7 @@ export const Hero = () => {
           <GatsbyImage
             className={styles['hero__img']}
             image={data.profilePic.childImageSharp.gatsbyImageData}
-            style={{ borderColor: theme === 'dark' ? '#2f4562' : '#161616' }}
+            style={{ borderColor: theme === 'dark' ? '#2f4562' : '#161616', opacity: 1 }}
           />
           <h2 className={styles['hero__text']} style={{ color: '#2f4562' }}>
             Daniel Gardner
