@@ -1,10 +1,9 @@
 import React from 'react'
-// import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import Section from '../components/section';
 import TimeLine from '../components/timeline';
 
-export const WorkPage = () => {
+const WorkPage = () => {
   const work = [
     {
       title: 'Associate Director of Engineering',
@@ -19,7 +18,9 @@ export const WorkPage = () => {
         'Introduced an open - source collaboration model, improving cross - team code sharing and development efficiency.',
         'Led technical and cybersecurity integration with OneMain, including laptop migrations, cyber tool deployment, and vulnerability management.',
         'Regularly helped engineers get unblocked and navigated them through corporate bureaucracy to accomplish their work.',
-      ]
+      ],
+      image: require('../images/work/onemainfinancial.png'),
+      type: 'job',
     },
     {
       title: 'Tech Lead / Senior Software Engineer Engineer',
@@ -29,8 +30,12 @@ export const WorkPage = () => {
         'Managed 6 engineers, including one manager overseeing 3 engineers, fostering a collaborative and high - performing culture.',
         'Partnered with product teams to scope, manage, and deliver projects, including SSO integration, subscription redesign, and major backend upgrades.',
         'Acted as a hands - on technical leader, reviewing PRs, contributing code, and guiding engineers through complex challenges.',
-
-      ]
+      ],
+      type: 'job',
+    },
+    {
+      transition: 'Trim was acquired by OneMain Financial in April 2021.',
+      type: 'transition',
     },
     {
       title: 'Software Engineer',
@@ -42,44 +47,41 @@ export const WorkPage = () => {
         'Built the Trim Transaction Brain that acts as Trim\'s CTA Engine for helping guide users toward savings opportunities.',
         'Led the integration and switch of payment providers from Braintree to Stripe which included designing our frontend, building out new backend logic and tables that were payment provider agnostic, and migrated all Braintree card data to Stripe data.',
         'Built Trim\'s onboarding funnel that allowed users to sign up for all of Trim\'s premium features.',
-
-      ]
+      ],
+      image: require('../images/work/trim-mobile.png'),
+      type: 'job',
     },
     {
       title: 'Frontend Engineer',
-      company: 'Revere',
+      company: 'Revere.ai',
       time: '3/2018 - 5/2019',
       bulletPoints: [
         'Converted to full-time role and took over full ownership of front end from Redshift As the sole front end engineer I am in charge of all front end feature development and DevOps for the Revere products. Revere is built with React and Redux on the client side and AWS Serverless Lambdas middleware written in Node.',
         'Since July 2018, I have been building out our newest product, Go, which allows users to create customized alerts on their data warehouses. Built UI that displays and manages alerts, connects to databases, and allows users to create alerts using both SQL and a Visual Alert Builder. Built Serverless Lambda functions to act as middleware to filter out bad requests and talk to AWS DynamoDB and SES. Built a serverless microservice that talks to Stripe to set up customer accounts, add subscriptions, and manage subscriptions.',
         'Took over full front end development of Essential (sunset November 1, 2018), which uses OAuth to connect to various marketing platforms and runs prebuilt alerts based on triggers from those platforms. Built out UI to view alerts and view deeper information on specific connected service accounts, architected an administrative tool that allows system admins to create and edit alerts, and built UI for Daily Pulse feature.',
-      ]
+      ],
+      image: require('../images/work/revere-mobile.jpg'),
+      type: 'job',
     },
     {
       title: 'Frontend Developer (contract)',
-      company: 'Revere',
+      company: 'Revere.ai',
       time: '1/2018 - 2/2018',
       bulletPoints: [
         'Hired by Revere to rebuild the front end application from JSP with some React to a fully built out React/Redux application that used Serverless Lambdas to talk to our backend APIs.',
-      ]
+      ],
+      type: 'job',
     },
     {
       title: 'Frontend Developer (contract)',
-      company: 'Revere',
+      company: 'Redshift Digital',
       time: '10/2017 - 12/2017',
       bulletPoints: [
         'Took over as lead working with client, Noon Home, to fix bugs and stylings, extend features, and create new React components on their website and custom Shopify webstore. Additionally, I built Noon’s Holiday Promotion page to spec. Noon Home is built with React, Redux, Express, and multiple external APIs.',
         'Contributed to other ongoing projects including 2017 holiday card and participated in sprint planning and daily standups.'
-      ]
-    },
-    {
-      title: 'Full Stack Software Engineer',
-      company: 'HomeSlice',
-      time: '6/2017 - 11/2018',
-      bulletPoints: [
-        'Part-time 10+ hours a week position building out an MVP for an early stage home co-ownership startup.',
-        'Built complete end to end custom components, using React, Redux, and Apollo to connect to our Node back end. Set up the GraphQL server that sits on top of Express, including defining the schema and connecting the resolvers to our PostgreSQL database.',
-      ]
+      ],
+      image: require('../images/work/redshift.png'),
+      type: 'job',
     },
     {
       title: 'Web Developer Resident',
@@ -87,12 +89,14 @@ export const WorkPage = () => {
       time: '7/2017 - 9/2017',
       bulletPoints: [
         'Selected by Galvanize instructors for the full-time paid Web Developer Resident (WDR) program. As a WDR, I assisted the instructors with planning, helping students debug their React/Redux and Express code, gave lectures and breakouts on React/React testing and Computer Science topics, tested out curriculum, and taught Learn To Code intro classes.',
-      ]
+      ],
+      image: require('../images/work/galvanize-mobile.png'),
+      type: 'job',
     }
   ]
   return (
     <React.Fragment>
-      <SEO title="Work History"/>
+      <Seo title="Work History"/>
       <Section>
         <TimeLine timelineItems={work} />
       </Section>

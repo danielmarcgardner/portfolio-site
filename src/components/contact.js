@@ -76,9 +76,7 @@ export const Contact = ({ setShowContact }) => {
             key={`contact-form-input-${i}`}
           />
         ))}
-        <p>
-          <Button type="submit">Contact Me</Button>
-        </p>
+        <Button type="submit" additionalClass={"submitForm"}>Contact Me</Button>
       </form>
     </div>
   );

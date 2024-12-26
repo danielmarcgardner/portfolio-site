@@ -1,6 +1,6 @@
 import React from 'react';
 // import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import Section from '../components/section';
 import SkillsContainer from '../components/skillscontainer';
 
@@ -81,10 +81,6 @@ const SkillsPage = () => {
       name: 'NPM'
     },
     {
-      img: require('../images/icons/yarn.png'),
-      name: 'Yarn'
-    },
-    {
       img: require('../images/icons/git.png'),
       name: 'Git'
     },
@@ -118,7 +114,7 @@ const SkillsPage = () => {
 
   return (
     <React.Fragment>
-      <SEO title="Skills" />
+      <Seo title="Skills" />
       {sections.map((section, i) => (
         <Section key={`skills-page-section-${i}`}>
           {section}
