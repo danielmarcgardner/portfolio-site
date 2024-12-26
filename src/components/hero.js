@@ -19,7 +19,6 @@ export const Hero = () => {
       `}
       render={data => (
         <div className={styles.hero}>
-          {console.log("data",data)}
           <GatsbyImage
             className={styles['hero__img']}
             image={data.profilePic.childImageSharp.gatsbyImageData}

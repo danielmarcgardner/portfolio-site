@@ -5,25 +5,45 @@
   padding: 1rem;
   display: flex;
   margin-bottom: 1rem;
+  @include breakpoint_func.breakpoint(breakpoint.$mobile-lg) {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
   &--left {
     width: 50%;
     max-width: 30rem;
 
-    @include breakpoint_func.breakpoint(breakpoint.$mobile-md) {
-      min-width: 15rem;
+    &--text {
+      margin-left: 1rem;
+    }
+    &--text--no--image {
+      margin-left: 0rem;
+    }
+    @include breakpoint_func.breakpoint(breakpoint.$mobile-lg) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
     }
   };
 
   &--right {
     max-width: 50rem;
-    @include breakpoint_func.breakpoint(breakpoint.$mobile-md) {
-      margin-left: 1.5rem;
-    }
     &--list {
       list-style: circle;
       &--item {
         margin-bottom: 0.5rem;
       }
+    }
+  }
+  &--image {
+    // width: 100%;
+    max-width: 15rem;
+    max-height: 15rem;
+    @include breakpoint_func.breakpoint(breakpoint.$mobile-md) {
+      max-width: 10rem;
+      max-height: 10rem;
+      margin-left: 1rem;
     }
   }
 }

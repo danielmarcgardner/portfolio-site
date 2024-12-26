@@ -1,15 +1,12 @@
 @use './variables/breakpoints' as breakpoint;
 @use './mixins/breakpoints' as breakpoint_func;
 
-.skillscontainer {
-  margin:auto;
-  &__content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-
+.transition {
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0rem;
     @include breakpoint_func.breakpoint(breakpoint.$mobile-lg) {
-        justify-content: space-around;
+        margin: 2rem;
     }
-  }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as styles from '../styles/button.module.scss';
 
 export const Button = ({ onClick, additionalClass, children, type }) => {
